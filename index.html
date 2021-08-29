@@ -1,1 +1,38 @@
-Hello World!
+---
+title: Home
+author: Bruno Franco
+year: 2021
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <h1>{{ "Under construction..." | downcase }}</h1>
+    <p id="" class="" style="">Welcome to my first Jekyll page.</p>
+    <p id="" class="" style="">Here goes some importants links to make this</p>
+    <p>
+        <button>
+            <a href="https://jekyllrb.com/docs/step-by-step/01-setup/>
+                      Jekyll">
+                Step-by-Step</a>
+        </button>
+    </p>
+    <p>
+        <button>
+            <a href="https://jekyllrb.com/docs/">Jekyll Docs</a>
+        </button>
+    </p>
+    <p>
+        <button>
+            <a href="https://jekyllrb.com/docs/plugins/">Jekyll Plugins</a>
+        </button>
+    </p>
+       
+     </body>
+     <footer>
+         <h4>{{ page.author }}  -  {{page.year}}</h4>
+     </footer> 
+</html>
