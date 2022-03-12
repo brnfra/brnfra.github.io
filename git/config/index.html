@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=">
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Configurando o ambiente Git | Wellcome to Bruno Franco’s homepage!</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Configurando o ambiente Git" />
+<meta name="author" content="Bruno Franco" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Começando do começo" />
+<meta property="og:description" content="Começando do começo" />
+<link rel="canonical" href="http://localhost:4000/git/config/" />
+<meta property="og:url" content="http://localhost:4000/git/config/" />
+<meta property="og:site_name" content="Wellcome to Bruno Franco’s homepage!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-11T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Configurando o ambiente Git" />
+<script type="application/ld+json">
+{"description":"Começando do começo","@type":"BlogPosting","headline":"Configurando o ambiente Git","dateModified":"2022-03-11T00:00:00-03:00","datePublished":"2022-03-11T00:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/git/config/"},"author":{"@type":"Person","name":"Bruno Franco"},"url":"http://localhost:4000/git/config/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+
+  <body>
+
+     <!-- HEADER -->
+    <div class="header">
+        <header class="inner">
+         
+
+          <h1 id="project_title">Wellcome to Bruno Franco's homepage!</h1>
+          <h2 id="project_tagline">Writing here some tutorials and wikis</h2>
+
+          
+       
+        </header>
+
+    </div>
+
+    
+    <div class="container" >
+      
+        <div class="main">
+          <h1>Configurando o ambiente Git</h1>
+          <section class="main-content">
+            <h2 id="começando-do-começo">Começando do começo</h2>
+
+<p>A filosofia do git é importante ser aprendida mas algumas coisas tem que ser
+checadas antes de qualquer outra. A ferramenta está instalada? Verifiquemos;</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git <span class="nt">--version</span>
+git version 2.30.2
+
+</code></pre></div></div>
+
+<p>Caso essa saída não foi a esperada proceda para instalação conforma a sua
+distribuição.</p>
+
+<p><br /></p>
+
+<p>Seu ambiente está configurado? Bom a maneira de verificar isso é através dos
+comandos;</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git config <span class="nt">--list</span>
+user.name<span class="o">=[</span>seu_usuario_git]
+user.email<span class="o">=[</span>seu_email_aqui]
+...
+</code></pre></div></div>
+
+<h2 id="configurando-usuario-e-email">Configurando usuario e email</h2>
+
+<p>Com os comandos abaixo voce manda o sistema guardar seu seu usuario e senha para
+trabalho no git e fazer com que a saída seja como descrito acima.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "seu_usuario_git"
+git config --global user.email "seu_email_git"
+
+</code></pre></div></div>
+
+<h2 id="configurando-ssh">Configurando ssh</h2>
+
+<p>No meu <a href="">repositório dotfiles</a> preparei um script que configura o ambiente com meus dados. Mas é interessante que ao menos uma vez faça passo a passo para aprendizado.
+Nas distribuiçoes Gnu/linux o procedimento é mais ou menos assim;
+<br />
+Nunca compartilhe sua chave privada. A chave que será adicionada ao repositório
+é a publica.</p>
+
+<p>No terminal faça(<a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Fonte</a>);</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh-keygen -t ed25519 -C "your_email@example.com"
+</code></pre></div></div>
+
+<p>O algorítimo vai gerar um par de chaves, não vamos adicionar arquivo para
+receber a chave.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Enter a file in which to save the key (/home/you/.ssh/algorithm): [Press enter]
+</code></pre></div></div>
+
+<p>Aqui simplesmente tecle Enter para aceitar o local padrão <code class="language-plaintext highlighter-rouge">/home/$user/.ssh/</code>
+<br />
+Será solicitado um cadastro de senha e ela será usada todas as vezes que sua
+chave ssh for usada.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Enter passphrase (empty for no passphrase): [Type a passphrase]
+&gt; Enter same passphrase again: [Type passphrase again]]
+
+</code></pre></div></div>
+
+<h3 id="adicionar-chave-ssh-ao-ssh-agent">Adicionar chave ssh ao ssh-agent</h3>
+
+<p>Para iniciar o <em>ssh-agent</em> em segundo plano faça;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ eval "$(ssh-agent -s)"
+Agent pid 59566
+</code></pre></div></div>
+<p>Aqui não ocorreu de solicitar senha sudo/root, mas esteja ciente que pode
+ocorrer.
+<br />
+Por fim adicione;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh-add ~/.ssh/id_ed25519
+</code></pre></div></div>
+<p>Pronto, tudo configurado.</p>
+
+<h3 id="obtendo-sua-chave-publica-para-cadastro-no-repositório">Obtendo sua chave publica para cadastro no repositório</h3>
+
+<p>Copie a chave pública utilizando o comando <code class="language-plaintext highlighter-rouge">cat</code> da linha de comando;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat ~/.ssh/id_ed25519.pub
+# Then select and copy the contents of the id_ed25519.pub file
+# displayed in the terminal to your clipboard
+</code></pre></div></div>
+<p><img src="https://docs.github.com/assets/cb-24796/images/help/settings/ssh-key-paste.png" /></p>
+
+<h2 id="testando-conexão">Testando conexão</h2>
+
+<p>No terminal digite;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh -T git@github.com
+# Attempts to ssh to GitHub
+
+</code></pre></div></div>
+<p>Confirme que deseja continuar a conexão e a saída, se tudo estiver funcionando,
+será</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Olá, username! You've successfully authenticated, but GitHub does not
+ provide shell access.
+</code></pre></div></div>
+<p>Aqui encerra esse tutorial de configuração para Git</p>
+
+          </section>
+        </div>
+        <aside class="sidebar">
+ 
+<h2 class="list-aside">Home</h2>
+<hr class="line-aside">
+<ul class="list">  
+      <li> <a href="/">Início</a>  </li>
+     
+</ul>  
+
+
+<h2 class="list-aside">Git</h2>
+<hr class="line-aside">
+    <ul class="list">
+      
+      
+        <li><a href="/git/basic/">Aprendendo o fluxo básico Git</a></li>
+      
+        <li><a href="/git/config/">Configurando o ambiente Git</a></li>
+      
+        <li><a href="/git/ssh">Problema com push via Ssh</a></li>
+      
+    </ul>
+
+
+<br><br>
+<hr class="line-aside">
+
+
+<br>O código fonte dessa página encontra-se neste <a id="forkme_banner" href="https://github.com/brnfra/brnfra.github.io"> repositório</a> .
+
+
+</aside>
+
+
+    </div>
+
+    <!-- FOOTER  -->
+<div class="footer">
+    
+    <footer class="inner">
+        
+        <p class="copyright">Wellcome to Bruno Franco's homepage! Maintained by Bruno Franco - <a href="https://github.com/brnfra">brnfra</a></p>
+        
+        <p  class="" style="">
+            <spam>Published with <a href="https://pages.github.com">GitHub
+                Pages.</a></spam>
+         
+            <spam> Made with Jekyll. Take guide in
+                <a href="https://jekyllrb.com/docs/step-by-step/01-setup/"> Step-by-Step. </a>
+            </spam>
+        </p>
+        <p >
+
+            <spam> What's Jekyll? You'll see in
+                <a href="https://jekyllrb.com/docs/">Jekyll Docs. </a>
+            </spam>
+            <spam> and diging deep with
+                <a href="https://jekyllrb.com/docs/plugins/"> Jekyll Plugins. </a>
+            </spam>
+        </p>
+    </footer>
+</div>
+
+
+       
+   </body>
+</html>

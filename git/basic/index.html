@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=">
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Aprendendo o fluxo básico Git | Wellcome to Bruno Franco’s homepage!</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Aprendendo o fluxo básico Git" />
+<meta name="author" content="Bruno Franco" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fluxo básico" />
+<meta property="og:description" content="Fluxo básico" />
+<link rel="canonical" href="http://localhost:4000/git/basic/" />
+<meta property="og:url" content="http://localhost:4000/git/basic/" />
+<meta property="og:site_name" content="Wellcome to Bruno Franco’s homepage!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-11T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Aprendendo o fluxo básico Git" />
+<script type="application/ld+json">
+{"description":"Fluxo básico","@type":"BlogPosting","headline":"Aprendendo o fluxo básico Git","dateModified":"2022-03-11T00:00:00-03:00","datePublished":"2022-03-11T00:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/git/basic/"},"author":{"@type":"Person","name":"Bruno Franco"},"url":"http://localhost:4000/git/basic/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+
+  <body>
+
+     <!-- HEADER -->
+    <div class="header">
+        <header class="inner">
+         
+
+          <h1 id="project_title">Wellcome to Bruno Franco's homepage!</h1>
+          <h2 id="project_tagline">Writing here some tutorials and wikis</h2>
+
+          
+       
+        </header>
+
+    </div>
+
+    
+    <div class="container" >
+      
+        <div class="main">
+          <h1>Aprendendo o fluxo básico Git</h1>
+          <section class="main-content">
+            <h2 id="fluxo-básico">Fluxo básico</h2>
+
+<p>O repositório pode ser local e remoto e o controle de versão pode ser utilizado
+em ambos.</p>
+
+<p>Pode-se iniciar o repositórioa local;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir new_repo
+$ cd new_repo
+$ git init
+
+</code></pre></div></div>
+
+<p>Será criado automaticamente a pasta oculta <code class="language-plaintext highlighter-rouge">.git/</code> que conterá, além das
+configurações, a história do repositorio.</p>
+
+<p>Além disso, voce pode criar o repositório diretamente de nos gerenciadores como
+<a href="https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-template-repository">GitHub</a> ou BitBucket, por exemplo.</p>
+
+<h2 id="trabalhando-no-repositório">Trabalhando no repositório</h2>
+
+<p><img width="800px" src="https://uidaholib.github.io/get-git/images/workflow.png" label="imagem com fluxo de trabalho git. retangulos coloridos alinhados horizontalmente com setas de diversos tamanhos apontando para cada." />
+<br />
+<a href="https://uidaholib.github.io/get-git/3workflow.html">Fonte da imagem</a>
+<br /></p>
+
+<p>Bem, aqui vamos trabalhar no nosso repositório que pode ser algum que foi
+clonado ou criado por você, como mostrado acima.</p>
+
+<p>Para clonar um repositório é muito simples, basta digitar no terminal;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY  
+
+</code></pre></div></div>
+<p>E automaticamente os arquivos de criação serão baixados no computador local.
+Esteja ciente de qual protocolo está usando para baixar/clonar o repositório.
+Caso o protocolo seja Https terá problema de conflito se você configurou por
+ssh. Caso aconteça algum problema <a href="">esta</a> pode ser uma solução.</p>
+
+<p>Superado essa etapa, e após ter trabalhado em nosso código, o log do git vai
+avisar que tem arquivos não rastreados ou modificados. Para ver o log faça;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+	teste
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+</code></pre></div></div>
+<p>Acima vemos que o arquivo teste não está sendo rastreado pelo versionamento.
+Vamos adicioná-lo;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add teste
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+On branch brnfra-readme-team
+Your branch is up to date with 'origin/brnfra-readme-team'.
+
+Changes to be committed:
+  (use "git restore --staged &lt;file&gt;..." to unstage)
+	new file:   teste
+
+</code></pre></div></div>
+<p>Agora, se compararmos com a figura acima estamos na “staging area”,
+possívelmente os testes não passarão, ou não deseja que o arquivo seja rastreado
+pelo versionamento, e nosso arquivo de teste tera que ser
+modificado novamente voltando ao status não rastreado, fazemos como sugerido pelo git;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git restore --staged teste
+</code></pre></div></div>
+<p>Caso esteja tudo OK, podemos seguir e vincular de vez nosso arquivo ao
+repositório, fazemos após adicioná-lo;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -m "comentário sobre as modificações"
+</code></pre></div></div>
+<p>Um artigo sobre boas práticas em commits (<a href="http://alistapart.com/article/the-art-of-the-commit/">A art of the Commit</a>).</p>
+
+<p>Após o commit temos a opção de subir arquivos para o repositório remoto ou
+trazer as mudanças recentes para esse commit.
+<br />
+Para subir o código fazemos;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push
+</code></pre></div></div>
+<p>ou</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push origin [your_branch]
+</code></pre></div></div>
+
+<p>Para encerrar esse tópico inicial deixo a sugestão de principiante de sempre
+fazer ;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git pull
+</code></pre></div></div>
+<p>Antes de iniciar os trabalhos, pois diminuem chances de inconsistências no seu
+repositório de trabalho, e principalmente, se há um trabalho colaborativo.
+ Lembrando que <code class="language-plaintext highlighter-rouge">git pull</code> é equivalente a fetch + merge em seu repositório
+ de trabalho.</p>
+
+<p>E repete-se esse ciclo de trabalho(na sua forma mais trivial) 
+git status -&gt; git pull -&gt; git add -&gt; git commit -&gt; git push</p>
+
+          </section>
+        </div>
+        <aside class="sidebar">
+ 
+<h2 class="list-aside">Home</h2>
+<hr class="line-aside">
+<ul class="list">  
+      <li> <a href="/">Início</a>  </li>
+     
+</ul>  
+
+
+<h2 class="list-aside">Git</h2>
+<hr class="line-aside">
+    <ul class="list">
+      
+      
+        <li><a href="/git/basic/">Aprendendo o fluxo básico Git</a></li>
+      
+        <li><a href="/git/config/">Configurando o ambiente Git</a></li>
+      
+        <li><a href="/git/ssh">Problema com push via Ssh</a></li>
+      
+    </ul>
+
+
+<br><br>
+<hr class="line-aside">
+
+
+<br>O código fonte dessa página encontra-se neste <a id="forkme_banner" href="https://github.com/brnfra/brnfra.github.io"> repositório</a> .
+
+
+</aside>
+
+
+    </div>
+
+    <!-- FOOTER  -->
+<div class="footer">
+    
+    <footer class="inner">
+        
+        <p class="copyright">Wellcome to Bruno Franco's homepage! Maintained by Bruno Franco - <a href="https://github.com/brnfra">brnfra</a></p>
+        
+        <p  class="" style="">
+            <spam>Published with <a href="https://pages.github.com">GitHub
+                Pages.</a></spam>
+         
+            <spam> Made with Jekyll. Take guide in
+                <a href="https://jekyllrb.com/docs/step-by-step/01-setup/"> Step-by-Step. </a>
+            </spam>
+        </p>
+        <p >
+
+            <spam> What's Jekyll? You'll see in
+                <a href="https://jekyllrb.com/docs/">Jekyll Docs. </a>
+            </spam>
+            <spam> and diging deep with
+                <a href="https://jekyllrb.com/docs/plugins/"> Jekyll Plugins. </a>
+            </spam>
+        </p>
+    </footer>
+</div>
+
+
+       
+   </body>
+</html>
