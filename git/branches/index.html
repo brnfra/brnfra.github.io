@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=ad2fcdf3a364fe6d4c28da0373614198aeb3f7d0">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Trabalhando com Branches(criar e alterar) | Wellcome to Bruno Franco’s homepage!</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Trabalhando com Branches(criar e alterar)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Segundo a propria fonte do artigo sobre branches vou tentar resumir a ideia. Linked Lists(listas ligadas), Trees(arvores), lembra? A ideia é aplicada aqui de uma forma mágica. A ideia não é ter que rastrear os arquivos e sim o estado das coisas. Guardadas como versões, cada estado." />
+<meta property="og:description" content="Segundo a propria fonte do artigo sobre branches vou tentar resumir a ideia. Linked Lists(listas ligadas), Trees(arvores), lembra? A ideia é aplicada aqui de uma forma mágica. A ideia não é ter que rastrear os arquivos e sim o estado das coisas. Guardadas como versões, cada estado." />
+<link rel="canonical" href="http://localhost:4000/git/branches/" />
+<meta property="og:url" content="http://localhost:4000/git/branches/" />
+<meta property="og:site_name" content="Wellcome to Bruno Franco’s homepage!" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-14T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Trabalhando com Branches(criar e alterar)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-14T00:00:00-03:00","datePublished":"2022-03-14T00:00:00-03:00","description":"Segundo a propria fonte do artigo sobre branches vou tentar resumir a ideia. Linked Lists(listas ligadas), Trees(arvores), lembra? A ideia é aplicada aqui de uma forma mágica. A ideia não é ter que rastrear os arquivos e sim o estado das coisas. Guardadas como versões, cada estado.","headline":"Trabalhando com Branches(criar e alterar)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/git/branches/"},"url":"http://localhost:4000/git/branches/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  </head>
+
+  <body>
+
+     <!-- HEADER -->
+    <div class="header">
+        <header class="inner">
+         
+
+          <h1 id="project_title">Wellcome to Bruno Franco's homepage!</h1>
+          <h2 id="project_tagline">Writing here some tutorials and wikis</h2>
+
+          
+       
+        </header>
+
+    </div>
+
+    
+    <div class="container" >
+      
+        <div class="main markdown-body">
+          <h1>Trabalhando com Branches(criar e alterar)</h1>
+          <section class="main-content">
+            <p>Segundo a propria fonte do artigo sobre <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">branches</a>
+vou tentar resumir a ideia. Linked Lists(listas ligadas), Trees(arvores), lembra? A ideia é aplicada aqui de uma
+forma mágica. A ideia não é ter que rastrear os arquivos e sim o estado das
+coisas. Guardadas como versões, cada estado.</p>
+
+<p><img witdh="700px" src="https://git-scm.com/book/en/v2/images/commits-and-parents.png" /><br />
+<a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">Fonte</a></p>
+
+<p>Cada estado aponta para o estado imediatamente anterior. E as branchs são
+simplemente a lista com ponteiros onde, por padrão, recebe o nome de master.
+Estas armazenam dados do nó pai, nome da arvore, do commit etc. Na
+medida que vamos realizando commits a branch corrente vai sendo preenchida com
+novos ponteiros para os commits anteriores como uma lista ligada. Inclusive,
+temos também o conceito de Head da mesma forma.</p>
+<blockquote>
+  <p>A branch master não é uma branch especial. É como qualquer outra.</p>
+</blockquote>
+
+<h2 id="criando-uma-nova-branchramo">Criando uma Nova Branch(ramo)</h2>
+
+<p>Para criar uma nova branch chamada <code class="language-plaintext highlighter-rouge">test</code> executamos o comando;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch test
+</code></pre></div></div>
+
+<p>Criamos aqui um ponteiro para o mesmo commit para onde a branch master aponta. Podemos ter um log sobre as branches com o comando <code class="language-plaintext highlighter-rouge">git log</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git log --oneline --decorate
+f30ab (HEAD -&gt; master, test) Add feature #32 - conn data base
+34ac2 Fix bug #1328 - short windows closing 
+98ca9 Initial commit
+
+</code></pre></div></div>
+<p>Com a leitura do log vemos que foram feitos 3 commits. Temos 2 branchs, master e
+test, e estamos atualmente na master que é para onde aponta HEAD.</p>
+
+<h2 id="alterar-branch-de-trabalho">Alterar branch de trabalho</h2>
+
+<p>Alterar branch de trabalho faz parte do fluxo natural de se trabalhar  com
+versionamento de código. E logo mais com o conhecimento de (merge)mesclar as branchs fara mais sentido. O comando para mudar de branch é;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout test
+</code></pre></div></div>
+<p>Quando executamos esse comando alteramos para onde aponta HEAD, nesse caso para
+a nova branch test. E, simples assim, para onde a HEAD aponta é nosso branch 
+atual de trabalho. Agora, se adicionarmos um arquivo e fizessemos o commit,
+assim;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vim test.rb
+$ git commit -a -m 'made a change'
+
+</code></pre></div></div>
+<p>Nossa branch atual test estaria afrente da branch master juntamente com o HEAD
+que aponta para test. Esta afrente em 1 commit. Se executaramos;</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout master
+</code></pre></div></div>
+<p>Alteramos para onde aponta o HEAD para master e não apenas isso notaremos que o
+arquivo test.rb não existe nesse estado, ou seja, reverte o estado do diretório 
+para o commit anterior. Se agora fizermos;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vim test.rb
+$ git commit -a -m 'made other change'
+</code></pre></div></div>
+<p>Teremos o seguinte log;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git log --oneline --decorate --graph --all
+* c2b9e (HEAD, master) Made other changes
+| * 87ab2 (test) Made a change
+|/
+* f30ab Add feature #32 - conn data base
+* 34ac2 Fix bug #1328 - short windows closing
+* 98ca9 initial commit
+</code></pre></div></div>
+<p>Vendo o log temos duas versoes do codigo apontando para o mesmo commit, o f30ab,
+dele duas versoes do mesmo projeto surgiram, dois estados. Dito isso, e por se
+tratar de versoes de estados, podemos ter n estados par nosso projeto de forma
+que a maior parte do que será trabalhado será o ponteiro dos estados e não
+varias versoes de arquivos que levaria tempo e memoria. Cria aqui o hábito de
+criar arvores com ramos do projeto e o tronco principal a fonte primária,
+digamos assim.</p>
+
+<ul>
+  <li>A partir da versão 2.23 do git o comand <code class="language-plaintext highlighter-rouge">$git switch</code>  pode ser usado para mudar de branch.</li>
+</ul>
+
+
+          </section>
+        </div>
+        <aside class="sidebar markdown-body">
+ 
+<h2>Home</h2>
+<ul>  
+      <li> <a href="/">Início</a>  </li>
+     
+</ul>  
+
+
+<h2>Dotfiles</h2>
+    <ul>
+      
+      
+        <li><a href="/git/dotfiles/">Gerenciando meus dotfiles</a></li>
+      
+    </ul>
+
+<h2>Git</h2>
+    <ul>
+      
+      
+        <li><a href="/git/basic/">Aprendendo o fluxo básico Git</a></li>
+      
+        <li><a href="/git/config/">Configurando o ambiente Git</a></li>
+      
+        <li><a href="/git/ssh">Problema com push via Ssh</a></li>
+      
+        <li><a href="/git/branches/">Trabalhando com Branches(criar e alterar)</a></li>
+      
+    </ul>
+
+<h2>Vim</h2>
+    <ul>
+      
+      
+        <li><a href="/vim/basic/">Vim tip(Your map list in use)</a></li>
+      
+    </ul>
+
+
+<br><br>
+
+
+<br>O código fonte dessa página encontra-se neste <a id="forkme_banner" href="https://github.com/brnfra/brnfra-githubio"> repositório</a> .
+
+
+</aside>
+
+
+    </div>
+
+    <!-- FOOTER  -->
+<div class="footer">
+    
+    <footer class="inner">
+        
+        <p class="copyright">Wellcome to Bruno Franco's homepage! Maintained by Bruno Franco - <a href="https://github.com/brnfra">brnfra</a></p>
+        
+        <p  class="" style="">
+            <spam>Published with <a href="https://pages.github.com">GitHub
+                Pages.</a></spam>
+         
+            <spam> Made with Jekyll. Take guide in
+                <a href="https://jekyllrb.com/docs/step-by-step/01-setup/"> Step-by-Step. </a>
+            </spam>
+        </p>
+        <p >
+
+            <spam> What's Jekyll? You'll see in
+                <a href="https://jekyllrb.com/docs/">Jekyll Docs. </a>
+            </spam>
+            <spam> and diging deep with
+                <a href="https://jekyllrb.com/docs/plugins/"> Jekyll Plugins. </a>
+            </spam>
+        </p>
+    </footer>
+</div>
+
+
+       
+   </body>
+</html>
