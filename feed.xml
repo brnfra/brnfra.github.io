@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-16T15:07:29-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Wellcome to Bruno Franco’s homepage!</title><subtitle>Writing here some tutorials and wikis</subtitle><entry><title type="html">Gerenciando meus dotfiles</title><link href="http://localhost:4000/git/dotfiles/" rel="alternate" type="text/html" title="Gerenciando meus dotfiles" /><published>2022-03-16T00:00:00-03:00</published><updated>2022-03-16T00:00:00-03:00</updated><id>http://localhost:4000/git/dotfiles-mng</id><content type="html" xml:base="http://localhost:4000/git/dotfiles/">&lt;h1 align=&quot;center&quot;&gt;My dotfiles Repository 🐧&lt;/h1&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;https://img.shields.io/badge/bash-script-brightgreen&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/requirement-git-orange&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/requirement-curl-importany&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/tests-in%20progress-red&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/license-MIT-informational&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/platform-linux--64-lightgrey&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/github/last-commit/brnfra/dotfiles&quot; /&gt;
+
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This code was provided by&lt;/em&gt; ;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;originally by user &lt;strong&gt;&lt;em&gt;StreakyCobra&lt;/em&gt;&lt;/strong&gt; in an &lt;a href=&quot;https://news.ycombinator.com/item?id=11070797&quot;&gt;Hacker News thread&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;in a wonderful tutorial by &lt;strong&gt;&lt;em&gt;&lt;a href=&quot;https://www.atlassian.com/git/tutorials/dotfiles&quot;&gt;Nicola Paolucci&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thank you guys for sharing :heart:&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/brnfra/dotfiles#requirements&quot;&gt;Requirements&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/brnfra/dotfiles#how-to-install&quot;&gt;Install&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/brnfra/dotfiles#updates&quot;&gt;Update my dotfiles after installation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/brnfra/dotfiles#dependencies&quot;&gt;Dependencies(check your pkgs)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;my-config-files-to-automate-computer-changing-configuration&quot;&gt;My config files to automate computer changing configuration.&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Config files for Gnu/Linux based distro systems.&lt;/li&gt;
+  &lt;li&gt;The config files expect &lt;em&gt;two monitors&lt;/em&gt;, maybe you have to change some things.&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;$HOME/.config/i3/autostart/wallpaper.sh&lt;/strong&gt; will change &lt;strong&gt;different wallpaper&lt;/strong&gt; for
+each monitor, if you don’t want this, change it.&lt;/li&gt;
+  &lt;li&gt;The i3config script &lt;em&gt;rotate the 2nd monitor to right and move it to right of the
+first&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;The keyboard layout is &lt;strong&gt;US-INT&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;ATTENTION&lt;/strong&gt;: Please, DO NOT copy/run any file here in your system &lt;strong&gt;if you do not fully understand what it does&lt;/strong&gt;. Seriously, &lt;strong&gt;DON’T do it!&lt;/strong&gt;)**&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Auto update script from repository&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Branches for each computers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Git&lt;/li&gt;
+  &lt;li&gt;Ssh&lt;/li&gt;
+  &lt;li&gt;Curl&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-to-install&quot;&gt;How to install&lt;/h2&gt;
+
+&lt;p&gt;This method consist to use git to track your config files. You don’t have to install extra tool, only git, ssh(coreutils) and curl.
+Install config tracking in your $HOME following the comand;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-Lks&lt;/span&gt; https://raw.githubusercontent.com/brnfra/dotfiles/master/bin/install.sh | /bin/bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/bin/config.sh&lt;/code&gt; will require your name and email to configure your locals definitions. Type and go.
+&lt;em&gt;Read and edit it first for your purpose&lt;/em&gt;, it will create some folders and copy config files, you can fork this repo and coment that line.
+Attention on ssh-key problems, just in case, you find help &lt;a href=&quot;https://docs.github.com/pt/authentication/connecting-to-github-with-ssh&quot;&gt;here&lt;/a&gt;.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[&lt;strong&gt;Optional&lt;/strong&gt;] If you’ll create enviroment to Java, Spring and React the script &lt;strong&gt;&lt;em&gt;java_spring_react.sh&lt;/em&gt;&lt;/strong&gt; gonna install &lt;em&gt;Heroku CLI&lt;/em&gt;, &lt;em&gt;Postman&lt;/em&gt;, &lt;em&gt;VSCode&lt;/em&gt; and &lt;em&gt;Spring Tool Suite&lt;/em&gt; in folder &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.local/opt/&lt;/code&gt; and add &lt;strong&gt;PATH&lt;/strong&gt; to &lt;strong&gt;.bash_exports&lt;/strong&gt;.
+In the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/bin&lt;/code&gt;  folder there are scripts for each case.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;updates&quot;&gt;Updates&lt;/h2&gt;
+
+&lt;p&gt;If I change configuration and like it, &lt;em&gt;How can I update for this change?&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You can update your remote repository and, after tests, run the script below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the folder &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/bin&lt;/code&gt; there is a script named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;update.sh&lt;/code&gt; such make a “&lt;strong&gt;pull request&lt;/strong&gt;” like a normal git repo. &lt;em&gt;After install&lt;/em&gt;, just run;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bash ~/bin/update.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Now, Git gonna &lt;strong&gt;update snapshot&lt;/strong&gt; of the remote repo in your $HOME.&lt;/p&gt;
+
+&lt;h2 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h2&gt;
+
+&lt;p&gt;Some pkgs here are installed in my computer, after fork, &lt;strong&gt;make changes to yours needs&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I3wm configs&lt;/li&gt;
+  &lt;li&gt;I3blocks and I3status configs&lt;/li&gt;
+  &lt;li&gt;Compton&lt;/li&gt;
+  &lt;li&gt;Vim&lt;/li&gt;
+  &lt;li&gt;NeoVim&lt;/li&gt;
+  &lt;li&gt;Vifm&lt;/li&gt;
+  &lt;li&gt;Rofi&lt;/li&gt;
+  &lt;li&gt;Xfce4-terminal&lt;/li&gt;
+  &lt;li&gt;fzf&lt;/li&gt;
+  &lt;li&gt;tmux&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some functions require some aplications and packages like xorg,fzf,fdfind for example.
+If you want full functions here will required, for some functions, the previous installation of some packages like;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;nm-applet(tool to show network icon)&lt;/li&gt;
+  &lt;li&gt;diodon(tool to show transfer area icon)&lt;/li&gt;
+  &lt;li&gt;gnome-screenshot(printscreen)&lt;/li&gt;
+  &lt;li&gt;compton(composer)&lt;/li&gt;
+  &lt;li&gt;nitrogen(wallpaper)&lt;/li&gt;
+  &lt;li&gt;fzf&lt;/li&gt;
+  &lt;li&gt;fdfind&lt;/li&gt;
+  &lt;li&gt;exa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/brnfra/dotfiles#my-dotfiles-repository-&quot;&gt;Back&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&quot;https://github.com/brnfra/dotfiles&quot;&gt;Dotfiles repo&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Dotfiles" /><summary type="html">My dotfiles Repository 🐧</summary></entry><entry><title type="html">Trabalhando com Branches(criar e alterar)</title><link href="http://localhost:4000/git/branches/" rel="alternate" type="text/html" title="Trabalhando com Branches(criar e alterar)" /><published>2022-03-14T00:00:00-03:00</published><updated>2022-03-14T00:00:00-03:00</updated><id>http://localhost:4000/git/git-branches</id><content type="html" xml:base="http://localhost:4000/git/branches/">&lt;p&gt;Segundo a propria fonte do artigo sobre &lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell&quot;&gt;branches&lt;/a&gt;
+vou tentar resumir a ideia. Linked Lists(listas ligadas), Trees(arvores), lembra? A ideia é aplicada aqui de uma
+forma mágica. A ideia não é ter que rastrear os arquivos e sim o estado das
+coisas. Guardadas como versões, cada estado.&lt;/p&gt;
+
+&lt;p&gt;&lt;img witdh=&quot;700px&quot; src=&quot;https://git-scm.com/book/en/v2/images/commits-and-parents.png&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell&quot;&gt;Fonte&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cada estado aponta para o estado imediatamente anterior. E as branchs são
+simplemente a lista com ponteiros onde, por padrão, recebe o nome de master.
+Estas armazenam dados do nó pai, nome da arvore, do commit etc. Na
+medida que vamos realizando commits a branch corrente vai sendo preenchida com
+novos ponteiros para os commits anteriores como uma lista ligada. Inclusive,
+temos também o conceito de Head da mesma forma.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A branch master não é uma branch especial. É como qualquer outra.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;criando-uma-nova-branchramo&quot;&gt;Criando uma Nova Branch(ramo)&lt;/h2&gt;
+
+&lt;p&gt;Para criar uma nova branch chamada &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test&lt;/code&gt; executamos o comando;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git branch test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Criamos aqui um ponteiro para o mesmo commit para onde a branch master aponta. Podemos ter um log sobre as branches com o comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git log&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git log --oneline --decorate
+f30ab (HEAD -&amp;gt; master, test) Add feature #32 - conn data base
+34ac2 Fix bug #1328 - short windows closing 
+98ca9 Initial commit
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Com a leitura do log vemos que foram feitos 3 commits. Temos 2 branchs, master e
+test, e estamos atualmente na master que é para onde aponta HEAD.&lt;/p&gt;
+
+&lt;h2 id=&quot;alterar-branch-de-trabalho&quot;&gt;Alterar branch de trabalho&lt;/h2&gt;
+
+&lt;p&gt;Alterar branch de trabalho faz parte do fluxo natural de se trabalhar  com
+versionamento de código. E logo mais com o conhecimento de (merge)mesclar as branchs fara mais sentido. O comando para mudar de branch é;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout test
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Quando executamos esse comando alteramos para onde aponta HEAD, nesse caso para
+a nova branch test. E, simples assim, para onde a HEAD aponta é nosso branch 
+atual de trabalho. Agora, se adicionarmos um arquivo e fizessemos o commit,
+assim;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim test.rb
+$ git commit -a -m 'made a change'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Nossa branch atual test estaria afrente da branch master juntamente com o HEAD
+que aponta para test. Esta afrente em 1 commit. Se executaramos;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Alteramos para onde aponta o HEAD para master e não apenas isso notaremos que o
+arquivo test.rb não existe nesse estado, ou seja, reverte o estado do diretório 
+para o commit anterior. Se agora fizermos;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim test.rb
+$ git commit -a -m 'made other change'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Teremos o seguinte log;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git log --oneline --decorate --graph --all
+* c2b9e (HEAD, master) Made other changes
+| * 87ab2 (test) Made a change
+|/
+* f30ab Add feature #32 - conn data base
+* 34ac2 Fix bug #1328 - short windows closing
+* 98ca9 initial commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Vendo o log temos duas versoes do codigo apontando para o mesmo commit, o f30ab,
+dele duas versoes do mesmo projeto surgiram, dois estados. Dito isso, e por se
+tratar de versoes de estados, podemos ter n estados par nosso projeto de forma
+que a maior parte do que será trabalhado será o ponteiro dos estados e não
+varias versoes de arquivos que levaria tempo e memoria. Cria aqui o hábito de
+criar arvores com ramos do projeto e o tronco principal a fonte primária,
+digamos assim.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A partir da versão 2.23 do git o comand &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$git switch&lt;/code&gt;  pode ser usado para mudar de branch.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Git" /><summary type="html">Segundo a propria fonte do artigo sobre branches vou tentar resumir a ideia. Linked Lists(listas ligadas), Trees(arvores), lembra? A ideia é aplicada aqui de uma forma mágica. A ideia não é ter que rastrear os arquivos e sim o estado das coisas. Guardadas como versões, cada estado.</summary></entry><entry><title type="html">Vim tip(Your map list in use)</title><link href="http://localhost:4000/vim/basic/" rel="alternate" type="text/html" title="Vim tip(Your map list in use)" /><published>2022-03-12T00:00:00-03:00</published><updated>2022-03-12T00:00:00-03:00</updated><id>http://localhost:4000/vim/vim-maps</id><content type="html" xml:base="http://localhost:4000/vim/basic/">&lt;p&gt;Neste poste vem uma dica rápida sobre Vim.&lt;br /&gt;
+As vezes podemos esquecer o que mapeamos no nosso querido editor. Procurando por respostas, deparei-me comuma resposta no &lt;a href=&quot;https://stackoverflow.com/questions/7642746/is-there-any-way-to-view-the-currently-mapped-keys-in-vim&quot;&gt;stackoverflow&lt;/a&gt; sobre isso.
+Para descobrir é simples, basta executar o comando no Vim ;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Para modo normal
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; :nmap
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Para modo visual
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; :vmap
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Para modo inserção
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; :imap
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;;D. Simples!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Vim" /><summary type="html">Neste poste vem uma dica rápida sobre Vim. As vezes podemos esquecer o que mapeamos no nosso querido editor. Procurando por respostas, deparei-me comuma resposta no stackoverflow sobre isso. Para descobrir é simples, basta executar o comando no Vim ;</summary></entry><entry><title type="html">Aprendendo o fluxo básico Git</title><link href="http://localhost:4000/git/basic/" rel="alternate" type="text/html" title="Aprendendo o fluxo básico Git" /><published>2022-03-11T00:00:00-03:00</published><updated>2022-03-11T00:00:00-03:00</updated><id>http://localhost:4000/git/git-basic-use</id><content type="html" xml:base="http://localhost:4000/git/basic/">&lt;h2 id=&quot;fluxo-básico&quot;&gt;Fluxo básico&lt;/h2&gt;
+
+&lt;p&gt;O repositório pode ser local e remoto e o controle de versão pode ser utilizado
+em ambos.&lt;/p&gt;
+
+&lt;p&gt;Pode-se iniciar o repositórioa local;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir new_repo
+$ cd new_repo
+$ git init
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Será criado automaticamente a pasta oculta &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git/&lt;/code&gt; que conterá, além das
+configurações, a história do repositorio.&lt;/p&gt;
+
+&lt;p&gt;Além disso, voce pode criar o repositório diretamente de nos gerenciadores como
+&lt;a href=&quot;https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-template-repository&quot;&gt;GitHub&lt;/a&gt; ou BitBucket, por exemplo.&lt;/p&gt;
+
+&lt;h2 id=&quot;trabalhando-no-repositório&quot;&gt;Trabalhando no repositório&lt;/h2&gt;
+
+&lt;p&gt;&lt;img width=&quot;800px&quot; src=&quot;https://uidaholib.github.io/get-git/images/workflow.png&quot; label=&quot;imagem com fluxo de trabalho git. retangulos coloridos alinhados horizontalmente com setas de diversos tamanhos apontando para cada.&quot; /&gt;
+&lt;br /&gt;
+&lt;a href=&quot;https://uidaholib.github.io/get-git/3workflow.html&quot;&gt;Fonte da imagem&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bem, aqui vamos trabalhar no nosso repositório que pode ser algum que foi
+clonado ou criado por você, como mostrado acima.&lt;/p&gt;
+
+&lt;p&gt;Para clonar um repositório é muito simples, basta digitar no terminal;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY  
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;E automaticamente os arquivos de criação serão baixados no computador local.
+Esteja ciente de qual protocolo está usando para baixar/clonar o repositório.
+Caso o protocolo seja Https terá problema de conflito se você configurou por
+ssh. Caso aconteça algum problema &lt;a href=&quot;&quot;&gt;esta&lt;/a&gt; pode ser uma solução.&lt;/p&gt;
+
+&lt;p&gt;Superado essa etapa, e após ter trabalhado em nosso código, o log do git vai
+avisar que tem arquivos não rastreados ou modificados. Para ver o log faça;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git status
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to include in what will be committed)
+	teste
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Acima vemos que o arquivo teste não está sendo rastreado pelo versionamento.
+Vamos adicioná-lo;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git add teste
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git status
+On branch brnfra-readme-team
+Your branch is up to date with 'origin/brnfra-readme-team'.
+
+Changes to be committed:
+  (use &quot;git restore --staged &amp;lt;file&amp;gt;...&quot; to unstage)
+	new file:   teste
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Agora, se compararmos com a figura acima estamos na “staging area”,
+possívelmente os testes não passarão, ou não deseja que o arquivo seja rastreado
+pelo versionamento, e nosso arquivo de teste tera que ser
+modificado novamente voltando ao status não rastreado, fazemos como sugerido pelo git;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git restore --staged teste
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Caso esteja tudo OK, podemos seguir e vincular de vez nosso arquivo ao
+repositório, fazemos após adicioná-lo;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git commit -m &quot;comentário sobre as modificações&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Um artigo sobre boas práticas em commits (&lt;a href=&quot;http://alistapart.com/article/the-art-of-the-commit/&quot;&gt;A art of the Commit&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Após o commit temos a opção de subir arquivos para o repositório remoto ou
+trazer as mudanças recentes para esse commit.
+&lt;br /&gt;
+Para subir o código fazemos;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;ou&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push origin [your_branch]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Para encerrar esse tópico inicial deixo a sugestão de principiante de sempre
+fazer ;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git pull
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Antes de iniciar os trabalhos, pois diminuem chances de inconsistências no seu
+repositório de trabalho, e principalmente, se há um trabalho colaborativo.
+ Lembrando que &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt; é equivalente a fetch + merge em seu repositório
+ de trabalho.&lt;/p&gt;
+
+&lt;p&gt;E repete-se esse ciclo de trabalho(na sua forma mais trivial) 
+git status -&amp;gt; git pull -&amp;gt; git add -&amp;gt; git commit -&amp;gt; git push&lt;/p&gt;</content><author><name></name></author><category term="Git" /><summary type="html">Fluxo básico</summary></entry><entry><title type="html">Configurando o ambiente Git</title><link href="http://localhost:4000/git/config/" rel="alternate" type="text/html" title="Configurando o ambiente Git" /><published>2022-03-11T00:00:00-03:00</published><updated>2022-03-11T00:00:00-03:00</updated><id>http://localhost:4000/git/git-config-env</id><content type="html" xml:base="http://localhost:4000/git/config/">&lt;h2 id=&quot;começando-do-começo&quot;&gt;Começando do começo&lt;/h2&gt;
+
+&lt;p&gt;A filosofia do git é importante ser aprendida mas algumas coisas tem que ser
+checadas antes de qualquer outra. A ferramenta está instalada? Verifiquemos;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+git version 2.30.2
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Caso essa saída não foi a esperada proceda para instalação conforma a sua
+distribuição.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Seu ambiente está configurado? Bom a maneira de verificar isso é através dos
+comandos;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--list&lt;/span&gt;
+user.name&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;seu_usuario_git]
+user.email&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;seu_email_aqui]
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;configurando-usuario-e-email&quot;&gt;Configurando usuario e email&lt;/h2&gt;
+
+&lt;p&gt;Com os comandos abaixo voce manda o sistema guardar seu seu usuario e senha para
+trabalho no git e fazer com que a saída seja como descrito acima.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config --global user.name &quot;seu_usuario_git&quot;
+git config --global user.email &quot;seu_email_git&quot;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;configurando-ssh&quot;&gt;Configurando ssh&lt;/h2&gt;
+
+&lt;p&gt;No meu &lt;a href=&quot;&quot;&gt;repositório dotfiles&lt;/a&gt; preparei um script que configura o ambiente com meus dados. Mas é interessante que ao menos uma vez faça passo a passo para aprendizado.
+Nas distribuiçoes Gnu/linux o procedimento é mais ou menos assim;
+&lt;br /&gt;
+Nunca compartilhe sua chave privada. A chave que será adicionada ao repositório
+é a publica.&lt;/p&gt;
+
+&lt;p&gt;No terminal faça(&lt;a href=&quot;https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent&quot;&gt;Fonte&lt;/a&gt;);&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;O algorítimo vai gerar um par de chaves, não vamos adicionar arquivo para
+receber a chave.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; Enter a file in which to save the key (/home/you/.ssh/algorithm): [Press enter]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Aqui simplesmente tecle Enter para aceitar o local padrão &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/home/$user/.ssh/&lt;/code&gt;
+&lt;br /&gt;
+Será solicitado um cadastro de senha e ela será usada todas as vezes que sua
+chave ssh for usada.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; Enter passphrase (empty for no passphrase): [Type a passphrase]
+&amp;gt; Enter same passphrase again: [Type passphrase again]]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;adicionar-chave-ssh-ao-ssh-agent&quot;&gt;Adicionar chave ssh ao ssh-agent&lt;/h3&gt;
+
+&lt;p&gt;Para iniciar o &lt;em&gt;ssh-agent&lt;/em&gt; em segundo plano faça;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ eval &quot;$(ssh-agent -s)&quot;
+Agent pid 59566
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Aqui não ocorreu de solicitar senha sudo/root, mas esteja ciente que pode
+ocorrer.
+&lt;br /&gt;
+Por fim adicione;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh-add ~/.ssh/id_ed25519
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Pronto, tudo configurado.&lt;/p&gt;
+
+&lt;h3 id=&quot;obtendo-sua-chave-publica-para-cadastro-no-repositório&quot;&gt;Obtendo sua chave publica para cadastro no repositório&lt;/h3&gt;
+
+&lt;p&gt;Copie a chave pública utilizando o comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cat&lt;/code&gt; da linha de comando;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cat ~/.ssh/id_ed25519.pub
+# Then select and copy the contents of the id_ed25519.pub file
+# displayed in the terminal to your clipboard
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://docs.github.com/assets/cb-24796/images/help/settings/ssh-key-paste.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;testando-conexão&quot;&gt;Testando conexão&lt;/h2&gt;
+
+&lt;p&gt;No terminal digite;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh -T git@github.com
+# Attempts to ssh to GitHub
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Confirme que deseja continuar a conexão e a saída, se tudo estiver funcionando,
+será&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Olá, username! You've successfully authenticated, but GitHub does not
+ provide shell access.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Aqui encerra esse tutorial de configuração para Git&lt;/p&gt;</content><author><name></name></author><category term="Git" /><summary type="html">Começando do começo</summary></entry><entry><title type="html">Problema com push via Ssh</title><link href="http://localhost:4000/git/ssh" rel="alternate" type="text/html" title="Problema com push via Ssh" /><published>2022-03-11T00:00:00-03:00</published><updated>2022-03-11T00:00:00-03:00</updated><id>http://localhost:4000/git/git-ssh-push-problem</id><content type="html" xml:base="http://localhost:4000/git/ssh">&lt;h2 id=&quot;e-agora-o-terminal-pede-senha-com-ssh-configurado&quot;&gt;E agora, o terminal pede senha com ssh configurado.&lt;/h2&gt;
+
+&lt;p&gt;É possível que tenha feito clone do repositório por Http.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Na pasta do seu repositório tem uma pasta oculta com o nome de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.git/&lt;/code&gt;
+com um arquivo chamado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config&lt;/code&gt;. Nesse arquivo tem uma linha com a
+configuração&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+url &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; https://username@repository-url.com
+&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Altere essa linha para&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git@github.com:username/repository-name.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Pronto no terminal passará a solicitar a sua chave pública.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/11403407/git-asks-for-username-every-time-i-push&quot;&gt;Fonte - git asks for username every time I push&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;esqueci-como-imprimir-na-tela-minha-chave-pública&quot;&gt;Esqueci como imprimir na tela minha chave pública&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Se vc gerou pelo tutorial fornecido pelo &lt;a href=&quot;https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key&quot;&gt;GitHub&lt;/a&gt; terá uma pasta oculta &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ssh&lt;/code&gt; na &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Home&lt;/code&gt; do seu usuário. Tudo o que precisa fazer é executar o comando ;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file_name]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Dessa forma;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$cat&lt;/span&gt; .ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Copie o código onde começa com rsa e cole nas chaves autorizadas a manipular o repositório.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;</content><author><name></name></author><category term="Git" /><summary type="html">E agora, o terminal pede senha com ssh configurado.</summary></entry></feed>
