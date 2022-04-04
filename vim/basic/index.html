@@ -4,25 +4,27 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=ad2fcdf3a364fe6d4c28da0373614198aeb3f7d0">
-
+    <meta name="viewport" content="width=device-width,maximum-scale=2,initial-scale=1.0">
+    <meta name="description" content="Blog pessoal com tutoriais e informações a respeito da prática e uso das ferreamenteas de tecnologia.">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=">
+    
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Vim tip(Your map list in use) | Wellcome to Bruno Franco’s homepage!</title>
+<title>Vim tip(Your map list in use) | Bruno Franco’s homepage!</title>
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Vim tip(Your map list in use)" />
+<meta name="author" content="Bruno Franco" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Neste poste vem uma dica rápida sobre Vim. As vezes podemos esquecer o que mapeamos no nosso querido editor. Procurando por respostas, deparei-me comuma resposta no stackoverflow sobre isso. Para descobrir é simples, basta executar o comando no Vim ;" />
 <meta property="og:description" content="Neste poste vem uma dica rápida sobre Vim. As vezes podemos esquecer o que mapeamos no nosso querido editor. Procurando por respostas, deparei-me comuma resposta no stackoverflow sobre isso. Para descobrir é simples, basta executar o comando no Vim ;" />
 <link rel="canonical" href="http://localhost:4000/vim/basic/" />
 <meta property="og:url" content="http://localhost:4000/vim/basic/" />
-<meta property="og:site_name" content="Wellcome to Bruno Franco’s homepage!" />
+<meta property="og:site_name" content="Bruno Franco’s homepage!" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-03-12T00:00:00-03:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Vim tip(Your map list in use)" />
 <script type="application/ld+json">
-{"description":"Neste poste vem uma dica rápida sobre Vim. As vezes podemos esquecer o que mapeamos no nosso querido editor. Procurando por respostas, deparei-me comuma resposta no stackoverflow sobre isso. Para descobrir é simples, basta executar o comando no Vim ;","@type":"BlogPosting","headline":"Vim tip(Your map list in use)","dateModified":"2022-03-12T00:00:00-03:00","datePublished":"2022-03-12T00:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vim/basic/"},"url":"http://localhost:4000/vim/basic/","@context":"https://schema.org"}</script>
+{"description":"Neste poste vem uma dica rápida sobre Vim. As vezes podemos esquecer o que mapeamos no nosso querido editor. Procurando por respostas, deparei-me comuma resposta no stackoverflow sobre isso. Para descobrir é simples, basta executar o comando no Vim ;","@type":"BlogPosting","headline":"Vim tip(Your map list in use)","dateModified":"2022-03-12T00:00:00-03:00","datePublished":"2022-03-12T00:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vim/basic/"},"url":"http://localhost:4000/vim/basic/","author":{"@type":"Person","name":"Bruno Franco"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -35,8 +37,8 @@
         <header class="inner">
          
 
-          <h1 id="project_title">Wellcome to Bruno Franco's homepage!</h1>
-          <h2 id="project_tagline">Writing here some tutorials and wikis</h2>
+          <h1 class="project-title">Bruno Franco's homepage!</h1>
+          <h2 class="project-tagline">Writing here some notes, tutorials and wikis</h2>
 
           
        
@@ -47,7 +49,7 @@
     
     <div class="container" >
       
-        <div class="main markdown-body">
+        <div class="main">
           <h1>Vim tip(Your map list in use)</h1>
           <section class="main-content">
             <p>Neste poste vem uma dica rápida sobre Vim.<br />
@@ -72,52 +74,59 @@ Para descobrir é simples, basta executar o comando no Vim ;</p>
 
           </section>
         </div>
-        <aside class="sidebar markdown-body">
- 
-<h2>Home</h2>
-<ul>  
-      <li> <a href="/">Início</a>  </li>
-     
-</ul>  
-
-
-<h2>Dotfiles</h2>
-    <ul>
-      
-      
-        <li><a href="/git/dotfiles/">Gerenciando meus dotfiles</a></li>
-      
-    </ul>
-
-<h2>Git</h2>
-    <ul>
-      
-      
-        <li><a href="/git/basic/">Aprendendo o fluxo básico Git</a></li>
-      
-        <li><a href="/git/config/">Configurando o ambiente Git</a></li>
-      
-        <li><a href="/git/ssh">Problema com push via Ssh</a></li>
-      
-        <li><a href="/git/branches/">Trabalhando com Branches(criar e alterar)</a></li>
-      
-    </ul>
-
-<h2>Vim</h2>
-    <ul>
-      
-      
-        <li><a href="/vim/basic/">Vim tip(Your map list in use)</a></li>
-      
-    </ul>
-
-
+        <aside class="sidebar">
+<div class="title-aside">
+    <h2> Home</h2>
+    <hr class="line-aside">
+    <ul class="list">  
+        <div class="menu-aside">
+          <li> <a href="/">Início</a>  </li>
+        </div> 
+    </ul>  
+</div>
+        
+    
+<div class="title-aside">
+    <h2>Vim</h2>
+    <hr class="line-aside">
+        <ul class="list">
+                
+                
+            <div class="menu-aside">
+                <li><a href="/vim/basic/">Vim tip(Your map list in use)</a></li>
+            </div>
+                
+        </ul>
+    </div>
+    
+<div class="title-aside">
+    <h2>Git</h2>
+    <hr class="line-aside">
+        <ul class="list">
+                
+                
+            <div class="menu-aside">
+                <li><a href="/git/basic/">Aprendendo o fluxo básico Git</a></li>
+            </div>
+                
+            <div class="menu-aside">
+                <li><a href="/git/config/">Configurando o ambiente Git</a></li>
+            </div>
+                
+            <div class="menu-aside">
+                <li><a href="/git/ssh">Problema com push via Ssh</a></li>
+            </div>
+                
+        </ul>
+    </div>
+    
 <br><br>
+<hr class="line-aside">
+<p class="footer-aside"
 
+<br>O código fonte dessa página encontra-se neste <a id="forkme_banner" href="https://github.com/brnfra/brnfra.github.io"> repositório</a> .
 
-<br>O código fonte dessa página encontra-se neste <a id="forkme_banner" href="https://github.com/brnfra/brnfra-githubio"> repositório</a> .
-
-
+</p>
 </aside>
 
 
@@ -128,7 +137,7 @@ Para descobrir é simples, basta executar o comando no Vim ;</p>
     
     <footer class="inner">
         
-        <p class="copyright">Wellcome to Bruno Franco's homepage! Maintained by Bruno Franco - <a href="https://github.com/brnfra">brnfra</a></p>
+        <p class="copyright">Bruno Franco's homepage! Maintained by Bruno Franco - <a href="https://github.com/brnfra">brnfra</a></p>
         
         <p  class="" style="">
             <spam>Published with <a href="https://pages.github.com">GitHub
