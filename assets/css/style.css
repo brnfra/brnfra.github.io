@@ -2889,11 +2889,11 @@ pre { margin-top: 0; margin-bottom: 0; font-family: "SFMono-Regular", Consolas, 
 
 .third-party-component { box-sizing: content-box; }
 
-body { background-color: #333333; margin: 0; font-family: Roboto, sans-serif; line-height: 1.4; letter-spacing: 0.01; }
+body { background-color: #333333; margin: 0; }
 
 body * + * { margin-top: 1.5em; }
 
-header { margin-left: 3em; margin-right: 3em; margin-top: 1.5em; margin-bottom: 0; padding: 1em 1.5em; color: #ebebeb; border-radius: .5em; background: linear-gradient(to bottom, #333333 0%, #5433FF 100%); mix-blend-mode: normal; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 3px; }
+header { margin: 1.5em 3em 0 3em; padding: 1em 1.5em; color: #ebebeb; border-radius: 8px; background: linear-gradient(to bottom, #333333 0%, #5433FF 100%); mix-blend-mode: normal; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
 .container { display: flex; width: auto; margin-left: 3em; }
 
@@ -2945,7 +2945,7 @@ a:active { color: red; }
 /* For tablets: */
 @media only screen and (max-width: 800px) { .container { flex-wrap: wrap-reverse; }
   .inner { margin-left: 1em; margin-right: 1em; }
-  .sidebar { background-color: #ebebeb; border-radius: .5em; border-radius: 20px; width: 100%; height: auto; margin-left: 0; display: contents; position: relative; }
+  .sidebar { background-color: #ebebeb; border-radius: .5em; width: 100%; height: auto; margin-left: 0; display: contents; position: relative; }
   .input-aside { border-style: solid; border-width: 1px; }
   .menu-aside { z-index: 1; margin-left: 1em; user-select: none; -webkit-user-select: none; overflow: auto; position: sticky; position: -webkit-sticky; top: 0; }
   input[type=radio] { border-style: solid; border-width: 1px; }
@@ -2964,8 +2964,8 @@ a:active { color: red; }
   .list li { padding: 3px; }
   .list-aside .list { padding: 0.5em 1em; text-align: center; overflow: visible; }
   .menu-aside input:checked ~ .title-aside { transform: none; }
-  .images { width: auto; position: relative; border-radius: 5px; }
-  .main { position: relative; padding-top: 20px; margin-top: -350px; width: auto; margin-right: 1em; margin-left: 1em; padding: 1em 1.5em; background-color: #ebebeb; border-radius: .5em; }
+  .images { width: auto; position: relative; border-radius: .5em; }
+  .main { position: relative; padding-top: 20px; top: -350px; width: auto; margin-right: 1em; margin-left: 1em; padding: 1em 1.5em; background-color: #ebebeb; border-radius: .5em; }
   .main-content { padding: 0; }
   .container { margin-left: 0px; }
   .highlight { width: 80vw; }
