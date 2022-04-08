@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2,initial-scale=1.0">
     <meta name="description" content="Blog pessoal com tutoriais e informações a respeito da prática e uso das ferreamenteas de tecnologia.">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=ad2fcdf3a364fe6d4c28da0373614198aeb3f7d0">
+    <link rel="icon" type="image/x-icon" href="/assets/img/hello.svg">
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet"> -->
 
 
     <!-- Begin Jekyll SEO tag v2.7.1 -->
@@ -64,11 +66,9 @@
 com um arquivo chamado <code class="language-plaintext highlighter-rouge">config</code>. Nesse arquivo tem uma linha com a
 configuração</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span>
-<span class="nb">.</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>texto ignorado<span class="o">}</span>
 url <span class="o">=</span> https://username@repository-url.com
-<span class="nb">.</span>
-<span class="nb">.</span>
+<span class="o">{</span>texto ignorado<span class="o">}</span>
 </code></pre></div>    </div>
   </li>
   <li>
@@ -76,7 +76,7 @@ url <span class="o">=</span> https://username@repository-url.com
   </li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git@github.com:username/repository-name.git
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"git@github.com:username/repository-name.git"</span>
 </code></pre></div></div>
 
 <p>Pronto no terminal passará a solicitar a sua chave pública.</p>
@@ -89,12 +89,12 @@ url <span class="o">=</span> https://username@repository-url.com
   <li>Se vc gerou pelo tutorial fornecido pelo <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">GitHub</a> terá uma pasta oculta <code class="language-plaintext highlighter-rouge">.ssh</code> na <code class="language-plaintext highlighter-rouge">/Home</code> do seu usuário. Tudo o que precisa fazer é executar o comando ;</li>
 </ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat</span> <span class="o">[</span>file_name]
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">cat</span> <span class="o">[</span>file_name]
 </code></pre></div></div>
 
 <p>Dessa forma;</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$cat</span> .ssh/id_rsa.pub
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">cat</span> .ssh/id_rsa.pub
 </code></pre></div></div>
 
 <ol>

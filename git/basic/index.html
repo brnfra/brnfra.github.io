@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2,initial-scale=1.0">
     <meta name="description" content="Blog pessoal com tutoriais e informações a respeito da prática e uso das ferreamenteas de tecnologia.">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=ad2fcdf3a364fe6d4c28da0373614198aeb3f7d0">
+    <link rel="icon" type="image/x-icon" href="/assets/img/hello.svg">
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet"> -->
 
 
     <!-- Begin Jekyll SEO tag v2.7.1 -->
@@ -61,9 +63,10 @@ em ambos.</p>
 
 <p>Pode-se iniciar o repositórioa local;</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir new_repo
-$ cd new_repo
-$ git init
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ <span class="nv">$ </span><span class="nb">mkdir </span>new_repo
+ <span class="nv">$ </span><span class="nb">cd </span>new_repo
+ <span class="nv">$ </span>git init
 
 </code></pre></div></div>
 
@@ -85,7 +88,8 @@ clonado ou criado por você, como mostrado acima.</p>
 
 <p>Para clonar um repositório é muito simples, basta digitar no terminal;</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY  
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ <span class="nv">$ </span>git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY  
 
 </code></pre></div></div>
 <p>E automaticamente os arquivos de criação serão baixados no computador local.
@@ -96,29 +100,31 @@ ssh. Caso aconteça algum problema <a href="">esta</a> pode ser uma solução.</
 <p>Superado essa etapa, e após ter trabalhado em nosso código, o log do git vai
 avisar que tem arquivos não rastreados ou modificados. Para ver o log faça;</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git status
+
 
 On branch main
-Your branch is up to date with 'origin/main'.
+Your branch is up to <span class="nb">date </span>with <span class="s1">'origin/main'</span><span class="nb">.</span>
 
 Untracked files:
-  (use "git add &lt;file&gt;..." to include in what will be committed)
+  <span class="o">(</span>use <span class="s2">"git add &lt;file&gt;..."</span> to include <span class="k">in </span>what will be committed<span class="o">)</span>
 	teste
 
-nothing added to commit but untracked files present (use "git add" to track)
+nothing added to commit but untracked files present <span class="o">(</span>use <span class="s2">"git add"</span> to track<span class="o">)</span>
 
 </code></pre></div></div>
+
 <p>Acima vemos que o arquivo teste não está sendo rastreado pelo versionamento.
 Vamos adicioná-lo;</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add teste
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git add teste
 </code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git status
 On branch brnfra-readme-team
-Your branch is up to date with 'origin/brnfra-readme-team'.
+Your branch is up to <span class="nb">date </span>with <span class="s1">'origin/brnfra-readme-team'</span><span class="nb">.</span>
 
 Changes to be committed:
-  (use "git restore --staged &lt;file&gt;..." to unstage)
+  <span class="o">(</span>use <span class="s2">"git restore --staged &lt;file&gt;..."</span> to unstage<span class="o">)</span>
 	new file:   teste
 
 </code></pre></div></div>
@@ -127,12 +133,12 @@ possívelmente os testes não passarão, ou não deseja que o arquivo seja rastr
 pelo versionamento, e nosso arquivo de teste tera que ser
 modificado novamente voltando ao status não rastreado, fazemos como sugerido pelo git;</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git restore --staged teste
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git restore <span class="nt">--staged</span> teste
 </code></pre></div></div>
 <p>Caso esteja tudo OK, podemos seguir e vincular de vez nosso arquivo ao
 repositório, fazemos após adicioná-lo;</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -m "comentário sobre as modificações"
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"comentário sobre as modificações"</span>
 </code></pre></div></div>
 <p>Um artigo sobre boas práticas em commits (<a href="http://alistapart.com/article/the-art-of-the-commit/">A art of the Commit</a>).</p>
 
@@ -141,16 +147,17 @@ trazer as mudanças recentes para esse commit.
 <br />
 Para subir o código fazemos;</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git push
 </code></pre></div></div>
 <p>ou</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push origin [your_branch]
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git push origin <span class="o">[</span>your_branch]
 </code></pre></div></div>
 
 <p>Para encerrar esse tópico inicial deixo a sugestão de principiante de sempre
 fazer ;</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git pull
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>git pull
 </code></pre></div></div>
 <p>Antes de iniciar os trabalhos, pois diminuem chances de inconsistências no seu
 repositório de trabalho, e principalmente, se há um trabalho colaborativo.

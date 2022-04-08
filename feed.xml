@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-08T01:29:13-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Bruno Franco’s homepage!</title><subtitle>Writing here some notes, tutorials and wikis</subtitle><entry><title type="html">Vim tip(Your map list in use)</title><link href="http://localhost:4000/vim/basic/" rel="alternate" type="text/html" title="Vim tip(Your map list in use)" /><published>2022-03-12T00:00:00-03:00</published><updated>2022-03-12T00:00:00-03:00</updated><id>http://localhost:4000/vim/vim-maps</id><content type="html" xml:base="http://localhost:4000/vim/basic/">&lt;p&gt;Neste poste vem uma dica rápida sobre Vim.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-08T12:46:18-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Bruno Franco’s homepage!</title><subtitle>Writing here some notes, tutorials and wikis</subtitle><author><name>Bruno Franco</name></author><entry><title type="html">Vim tip(Your map list in use)</title><link href="http://localhost:4000/vim/basic/" rel="alternate" type="text/html" title="Vim tip(Your map list in use)" /><published>2022-03-12T00:00:00-03:00</published><updated>2022-03-12T00:00:00-03:00</updated><id>http://localhost:4000/vim/vim-maps</id><content type="html" xml:base="http://localhost:4000/vim/basic/">&lt;p&gt;Neste poste vem uma dica rápida sobre Vim.&lt;br /&gt;
 As vezes podemos esquecer o que mapeamos no nosso querido editor. Procurando por respostas, deparei-me comuma resposta no &lt;a href=&quot;https://stackoverflow.com/questions/7642746/is-there-any-way-to-view-the-currently-mapped-keys-in-vim&quot;&gt;stackoverflow&lt;/a&gt; sobre isso.
 Para descobrir é simples, basta executar o comando no Vim ;&lt;/p&gt;
 
@@ -26,9 +26,10 @@ em ambos.&lt;/p&gt;
 
 &lt;p&gt;Pode-se iniciar o repositórioa local;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir new_repo
-$ cd new_repo
-$ git init
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;new_repo
+ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;new_repo
+ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -50,7 +51,8 @@ clonado ou criado por você, como mostrado acima.&lt;/p&gt;
 
 &lt;p&gt;Para clonar um repositório é muito simples, basta digitar no terminal;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY  
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY  
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;E automaticamente os arquivos de criação serão baixados no computador local.
@@ -61,29 +63,31 @@ ssh. Caso aconteça algum problema &lt;a href=&quot;&quot;&gt;esta&lt;/a&gt; pod
 &lt;p&gt;Superado essa etapa, e após ter trabalhado em nosso código, o log do git vai
 avisar que tem arquivos não rastreados ou modificados. Para ver o log faça;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git status
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
+
 
 On branch main
-Your branch is up to date with 'origin/main'.
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;'origin/main'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 
 Untracked files:
-  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to include in what will be committed)
+  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to include &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;what will be committed&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 	teste
 
-nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+nothing added to commit but untracked files present &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git add&quot;&lt;/span&gt; to track&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;Acima vemos que o arquivo teste não está sendo rastreado pelo versionamento.
 Vamos adicioná-lo;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git add teste
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add teste
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git status
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
 On branch brnfra-readme-team
-Your branch is up to date with 'origin/brnfra-readme-team'.
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;'origin/brnfra-readme-team'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 
 Changes to be committed:
-  (use &quot;git restore --staged &amp;lt;file&amp;gt;...&quot; to unstage)
+  &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;use &lt;span class=&quot;s2&quot;&gt;&quot;git restore --staged &amp;lt;file&amp;gt;...&quot;&lt;/span&gt; to unstage&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 	new file:   teste
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -92,12 +96,12 @@ possívelmente os testes não passarão, ou não deseja que o arquivo seja rastr
 pelo versionamento, e nosso arquivo de teste tera que ser
 modificado novamente voltando ao status não rastreado, fazemos como sugerido pelo git;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git restore --staged teste
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git restore &lt;span class=&quot;nt&quot;&gt;--staged&lt;/span&gt; teste
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Caso esteja tudo OK, podemos seguir e vincular de vez nosso arquivo ao
 repositório, fazemos após adicioná-lo;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git commit -m &quot;comentário sobre as modificações&quot;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;comentário sobre as modificações&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Um artigo sobre boas práticas em commits (&lt;a href=&quot;http://alistapart.com/article/the-art-of-the-commit/&quot;&gt;A art of the Commit&lt;/a&gt;).&lt;/p&gt;
 
@@ -106,16 +110,17 @@ trazer as mudanças recentes para esse commit.
 &lt;br /&gt;
 Para subir o código fazemos;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;ou&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push origin [your_branch]
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;your_branch]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Para encerrar esse tópico inicial deixo a sugestão de principiante de sempre
 fazer ;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git pull
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git pull
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Antes de iniciar os trabalhos, pois diminuem chances de inconsistências no seu
 repositório de trabalho, e principalmente, se há um trabalho colaborativo.
@@ -235,11 +240,9 @@ será&lt;/p&gt;
 com um arquivo chamado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config&lt;/code&gt;. Nesse arquivo tem uma linha com a
 configuração&lt;/p&gt;
 
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;texto ignorado&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 url &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; https://username@repository-url.com
-&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;texto ignorado&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -247,7 +250,7 @@ url &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; https://username@repository-u
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git@github.com:username/repository-name.git
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;git@github.com:username/repository-name.git&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Pronto no terminal passará a solicitar a sua chave pública.&lt;/p&gt;
@@ -260,12 +263,12 @@ url &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; https://username@repository-u
   &lt;li&gt;Se vc gerou pelo tutorial fornecido pelo &lt;a href=&quot;https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key&quot;&gt;GitHub&lt;/a&gt; terá uma pasta oculta &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ssh&lt;/code&gt; na &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Home&lt;/code&gt; do seu usuário. Tudo o que precisa fazer é executar o comando ;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file_name]
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file_name]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Dessa forma;&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$cat&lt;/span&gt; .ssh/id_rsa.pub
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; .ssh/id_rsa.pub
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ol&gt;
