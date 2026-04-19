@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2,initial-scale=1.0">
     <meta name="description" content="Blog pessoal com tutoriais e informações a respeito da prática e uso das ferreamenteas de tecnologia.">
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=d6f88604f21adef0b7f91c49db4794f6063a51fb">
-    <link rel="icon" type="image/x-icon" href="/assets/img/hello.svg">
+    <link rel="icon" type="image/x-icon" href="/assets/img/github-com.svg">
 
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet"> -->
 
@@ -36,26 +36,29 @@
 
   <body>
 
-     <!-- HEADER -->
-    <div class="header">
-        <header class="inner">
-         
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <div class="navbar-brand">
+          <a href="/" style="text-decoration:none;color:inherit;">
+            <span class="navbar-title">Dev Notes</span>
+            <span class="navbar-subtitle">Anotações sobre programação e desenvolvimento</span>
+          </a>
+        </div>
+        <ul class="navbar-links">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/#anotacoes">Anotações</a></li>
+          <li><a href="/about.html">Sobre</a></li>
+        </ul>
+      </div>
+    </nav>
 
-          <h1 class="project-title">Bruno Franco's homepage!</h1>
-          <h2 class="project-tagline">Writing here some notes, tutorials and wikis</h2>
-
-          
-       
-        </header>
-
-    </div>
-
-    
-    <div class="container" >
-      
-        <div class="main">
-          <h1>Aprendendo o fluxo básico Git</h1>
-          <section class="main-content">
+    <div class="article-page">
+      <div class="article-inner">
+        <div class="article-breadcrumb"><a href="/">Home</a> / <a href="/#anotacoes">Git</a></div>
+        <span class="card-tag git" style="font-size:0.72rem;">GIT</span>
+        <h1 class="article-title">Aprendendo o fluxo básico Git</h1>
+        <section class="article-content">
             <h2 id="fluxo-básico">Fluxo básico</h2>
 
 <p>O repositório pode ser local e remoto e o controle de versão pode ser utilizado
@@ -167,98 +170,15 @@ repositório de trabalho, e principalmente, se há um trabalho colaborativo.
 <p>E repete-se esse ciclo de trabalho(na sua forma mais trivial) 
 git status -&gt; git pull -&gt; git add -&gt; git commit -&gt; git push</p>
 
-          </section>
-        </div>
-        <aside class="sidebar">
-    <div class="menu-aside">
-        <input class="input-aside" type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <div class="box-input-aside"></div>
-
-        <div class="title-aside">
-            <h2> Home</h2>
-            <ul class="list">  
-                <div class="list-aside">
-                    <a href="/"><li>Início</li></a> 
-                </div> 
-            </ul>  
-        </div>
-        
-        
-        <div class="title-aside">
-            <h2>Vim</h2>
-            <ul class="list">
-                
-                
-                <div class="list-aside">
-                    <a href="/vim/basic/"><li>Vim tip(Your map list in use)</li></a>
-                </div>
-                
-            </ul>
-        </div>
-        
-        <div class="title-aside">
-            <h2>Git</h2>
-            <ul class="list">
-                
-                
-                <div class="list-aside">
-                    <a href="/git/basic/"><li>Aprendendo o fluxo básico Git</li></a>
-                </div>
-                
-                <div class="list-aside">
-                    <a href="/git/config/"><li>Configurando o ambiente Git</li></a>
-                </div>
-                
-                <div class="list-aside">
-                    <a href="/git/ssh"><li>Problema com push via Ssh</li></a>
-                </div>
-                
-            </ul>
-        </div>
-        
-        <br><br>
-        <p class="footer-aside"
-           
-           <br>O código fonte dessa página encontra-se neste <a id="forkme_banner" href="https://github.com/brnfra/brnfra.github.io"> repositório</a> .
-           
-        </p>
-    </div>
-</aside>
-
-
+        </section>
+      </div>
     </div>
 
-    <!-- FOOTER  -->
-<div class="footer">
-    
-    <footer class="inner">
-        
-        <p class="copyright">Bruno Franco's homepage! Maintained by Bruno Franco - <a href="https://github.com/brnfra">brnfra</a></p>
-        
-        <p  class="" style="">
-            <spam>Published with <a href="https://pages.github.com">GitHub
-                Pages.</a></spam>
-         
-            <spam> Made with Jekyll. Take guide in
-                <a href="https://jekyllrb.com/docs/step-by-step/01-setup/"> Step-by-Step. </a>
-            </spam>
-        </p>
-        <p >
-
-            <spam> What's Jekyll? You'll see in
-                <a href="https://jekyllrb.com/docs/">Jekyll Docs. </a>
-            </spam>
-            <spam> and diging deep with
-                <a href="https://jekyllrb.com/docs/plugins/"> Jekyll Plugins. </a>
-            </spam>
-        </p>
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>Bruno Franco &mdash; <a href="https://github.com/brnfra">brnfra</a> &mdash; Publicado com <a href="https://pages.github.com">GitHub Pages</a></p>
+      </div>
     </footer>
-</div>
 
-
-       
-   </body>
+  </body>
 </html>
